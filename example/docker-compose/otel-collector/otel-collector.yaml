@@ -2,6 +2,18 @@ receivers:
   otlp:
     protocols:
       http:
+  hostmetrics:
+    collection_interval: 1m
+    scrapers:
+      cpu:
+      disk:
+      load:
+      filesystem:
+      memory:
+      network:
+      paging:
+      processes:
+      process:
 exporters:
   otlp:
     endpoint: tempo:4317
